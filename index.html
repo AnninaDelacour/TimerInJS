@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>Timer in JS</title>
+</head>
+
+<body>
+    <div class="headline">
+        <h1>JS Timer</h1>
+        <h3>You can change the time by yourself</h3>
+    </div>
+    <div class="timer">
+        <div class="controls">
+            <input id="duration" value="30">
+            <div>
+                <button type="button" class="btn" id="start"><i class="fas fa-play-circle"></i></button>
+                <button type="button" class="btn" id="pause"><i class="fas fa-pause-circle"></i></button>
+            </div>
+        </div>
+        <div class="circle">
+            <svg height="400" width="400">
+                <defs>
+                    <linearGradient id="linear" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#FDC830">
+                            <animate attributeName="stop-color" values="#FDC830; #F37335; #FDC830" dur="4s"
+                                repeatCount="indefinite"></animate>
+                        </stop>
+                        <stop offset="100%" stop-color="#F37335">
+                            <animate attributeName="stop-color" values="#F37335; #FDC830; #F37335" dur="4s"
+                                repeatCount="indefinite"></animate>
+                        </stop>
+                    </linearGradient>
+                </defs>
+                <circle fill="transparent" stroke="url(#linear)" stroke-width="20" r="190" cx="200" cy="200"
+                    transform="rotate(-90 200 200)">
+                </circle>
+                <!-- r = radius, cx, cy = center points of circle; -->
+            </svg>
+        </div>
+
+
+
+        <script src="timer.js"></script>
+        <script src="index.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
